@@ -1,8 +1,7 @@
 (function () {
   'use strict';
 
-  // EDITAR: reemplaza por el número real de WhatsApp del cliente (formato 56912345678)
-  var WHATSAPP_NUMBER = '56900000000';
+  var WHATSAPP_NUMBER = '56979282151';
   var DEFAULT_MESSAGE = 'Hola! Quiero reservar una hora 💇‍♀️';
 
   function waLink(message) {
@@ -26,6 +25,36 @@
   }
   updateNav();
   window.addEventListener('scroll', updateNav, { passive: true });
+
+  // ---------- Comparador antes/después (galería) ----------
+  document.querySelectorAll('.js-compare-range').forEach(function (input) {
+    var container = input.closest('.compare');
+    if (!container) return;
+    function update() { container.style.setProperty('--pos', input.value + '%'); }
+    input.addEventListener('input', update);
+    update();
+  });
+
+  // ---------- Botón flotante WhatsApp: en mobile/tablet aparece tras el hero ----------
+  var waFloat = document.querySelector('.wa-float');
+  var heroEl = document.querySelector('.hero');
+  var narrowQuery = window.matchMedia('(max-width: 900px)');
+  function updateWaFloat() {
+    if (!waFloat || !heroEl) return;
+    if (!narrowQuery.matches) {
+      waFloat.classList.remove('wa-float--hidden');
+      return;
+    }
+    var heroBottom = heroEl.getBoundingClientRect().bottom + window.scrollY;
+    if (window.scrollY > heroBottom - 200) {
+      waFloat.classList.remove('wa-float--hidden');
+    } else {
+      waFloat.classList.add('wa-float--hidden');
+    }
+  }
+  updateWaFloat();
+  window.addEventListener('scroll', updateWaFloat, { passive: true });
+  window.addEventListener('resize', updateWaFloat);
 
   // ---------- Scroll suave con offset por el nav fijo ----------
   var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

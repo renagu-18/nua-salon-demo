@@ -49,7 +49,7 @@
         <a href="#servicios" data-scroll>Servicios</a>
         <a href="#galeria" data-scroll>Galería</a>
         <a href="#contacto" data-scroll>Contacto</a>
-        <a href="#contacto" class="btn btn--ghost" data-scroll>Reservar</a>
+        <a href="#" class="btn btn--ghost js-wa-link" data-wa-message="Hola, quiero reservar hora en Nua Salón">Reservar</a>
       </nav>
     </div>
   </header>
@@ -62,9 +62,9 @@
         <p class="eyebrow">San Miguel · Santiago</p>
         <h1 id="hero-title" class="hero__title">Cortes que duran.<br />Color que habla.</h1>
         <span class="rule" aria-hidden="true"></span>
-        <p class="hero__desc">Peluquería profesional con más de 8 años en San Miguel. Cada visita, un resultado distinto.</p>
+        <p class="hero__desc">Peluquería profesional con más de 8 años en San Miguel. Cada visita, pensada para ti.</p>
         <div class="hero__actions">
-          <a href="#contacto" class="btn btn--primary" data-scroll>Reservar hora</a>
+          <a href="#" class="btn btn--primary js-wa-link" data-wa-message="Hola, quiero reservar hora en Nua Salón">Reservar hora</a>
           <a href="#servicios" class="btn btn--outline" data-scroll>Ver servicios</a>
         </div>
       </div>
@@ -81,10 +81,11 @@
         <span class="stats__num">+2.000</span>
         <span class="stats__label">clientas atendidas</span>
       </div>
-      <div class="stats__item">
+      <!-- EDITAR: reemplaza "#" con la URL real de la ficha de Google Business de Nua Salón -->
+      <a href="#" class="stats__item" target="_blank" rel="noopener">
         <span class="stats__num">5&#9733;</span>
         <span class="stats__label">en Google</span>
-      </div>
+      </a>
     </section>
 
     <!-- ===================== SERVICIOS ===================== -->
@@ -99,41 +100,49 @@
           <span class="service-row__name">Corte damas</span>
           <span class="service-row__dots" aria-hidden="true"></span>
           <span class="service-row__price">desde $10.000</span>
+          <a href="#" class="service-row__cta js-wa-link" data-wa-message="Hola, quiero reservar hora para corte de dama">Reservar</a>
         </li>
         <li class="service-row reveal">
           <span class="service-row__name">Corte varón</span>
           <span class="service-row__dots" aria-hidden="true"></span>
           <span class="service-row__price">desde $7.000</span>
+          <a href="#" class="service-row__cta js-wa-link" data-wa-message="Hola, quiero reservar hora para corte de varón">Reservar</a>
         </li>
         <li class="service-row reveal">
           <span class="service-row__name">Tintura completa</span>
           <span class="service-row__dots" aria-hidden="true"></span>
           <span class="service-row__price">desde $35.000</span>
+          <a href="#" class="service-row__cta js-wa-link" data-wa-message="Hola, quiero reservar hora para tintura completa">Reservar</a>
         </li>
         <li class="service-row reveal">
           <span class="service-row__name">Mechas o balayage</span>
           <span class="service-row__dots" aria-hidden="true"></span>
           <span class="service-row__price">desde $45.000</span>
+          <a href="#" class="service-row__cta js-wa-link" data-wa-message="Hola, quiero reservar hora para balayage">Reservar</a>
         </li>
         <li class="service-row reveal">
           <span class="service-row__name">Keratina</span>
           <span class="service-row__dots" aria-hidden="true"></span>
           <span class="service-row__price">desde $60.000</span>
+          <a href="#" class="service-row__cta js-wa-link" data-wa-message="Hola, quiero reservar hora para keratina">Reservar</a>
         </li>
         <li class="service-row reveal">
           <span class="service-row__name">Peinado de evento</span>
           <span class="service-row__dots" aria-hidden="true"></span>
           <span class="service-row__price">desde $20.000</span>
+          <a href="#" class="service-row__cta js-wa-link" data-wa-message="Hola, quiero reservar hora para peinado de evento">Reservar</a>
         </li>
         <li class="service-row reveal">
           <span class="service-row__name">Manicura</span>
           <span class="service-row__dots" aria-hidden="true"></span>
           <span class="service-row__price">desde $8.000</span>
+          <a href="#" class="service-row__cta js-wa-link" data-wa-message="Hola, quiero reservar hora para manicura">Reservar</a>
         </li>
         <li class="service-row reveal">
           <span class="service-row__name">Esmaltado permanente</span>
           <span class="service-row__dots" aria-hidden="true"></span>
           <span class="service-row__price">desde $12.000</span>
+          <a href="#" class="service-row__cta js-wa-link" data-wa-message="Hola, quiero reservar hora para esmaltado permanente">Reservar</a>
         </li>
       </ul>
     </section>
@@ -145,24 +154,43 @@
         <h2 id="gallery-title">Nuestro trabajo</h2>
       </div>
 
+      <!-- EDITAR: todas las fotos de esta galería son de stock (Unsplash), temporales
+           hasta que el cliente suba fotos reales del salón y su trabajo. -->
       <div class="gallery__grid">
-        <div class="gallery__item gallery__item--tall reveal" role="img" aria-label="Foto: corte editorial en primer plano, luz cálida lateral">
-          <span>Foto: corte editorial en primer plano, luz cálida lateral</span>
+        <div class="gallery__item gallery__item--tall gallery__compare reveal" aria-label="Antes y después: balayage, foto de stock temporal">
+          <div class="compare">
+            <img class="compare__after" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&amp;q=75" srcset="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&amp;q=75 400w, https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&amp;q=75 800w" sizes="(max-width: 900px) 50vw, 360px" alt="Después: balayage con reflejos cálidos, foto de stock temporal" loading="lazy" />
+            <img class="compare__before" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&amp;q=75" srcset="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&amp;q=75 400w, https://images.unsplash.com/photo-1517841905240-472988babdf9?w=800&amp;q=75 800w" sizes="(max-width: 900px) 50vw, 360px" alt="Antes: cabello sin color, foto de stock temporal" loading="lazy" />
+            <span class="compare__handle" aria-hidden="true"></span>
+            <span class="compare__tag compare__tag--before">Antes</span>
+            <span class="compare__tag compare__tag--after">Después</span>
+            <input type="range" min="0" max="100" value="50" class="compare__range js-compare-range" aria-label="Deslizar para comparar antes y después del balayage" />
+          </div>
         </div>
         <div class="gallery__col">
-          <div class="gallery__item gallery__item--square reveal" role="img" aria-label="Foto: proceso de balayage sobre mesón de trabajo">
-            <span>Foto: proceso de balayage sobre mesón de trabajo</span>
+          <div class="gallery__item gallery__item--square gallery__split reveal" aria-label="Antes y después: tintura, foto de stock temporal">
+            <div class="split">
+              <figure class="split__half">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&amp;q=75" srcset="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&amp;q=75 300w, https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&amp;q=75 500w" sizes="(max-width: 900px) 25vw, 180px" alt="Antes: cabello natural, foto de stock temporal" loading="lazy" />
+                <figcaption>Antes</figcaption>
+              </figure>
+              <figure class="split__half">
+                <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=500&amp;q=75" srcset="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=300&amp;q=75 300w, https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=500&amp;q=75 500w" sizes="(max-width: 900px) 25vw, 180px" alt="Después: tintura de color, foto de stock temporal" loading="lazy" />
+                <figcaption>Después</figcaption>
+              </figure>
+            </div>
           </div>
-          <div class="gallery__item gallery__item--square reveal" role="img" aria-label="Foto: detalle de manicura terminada">
-            <span>Foto: detalle de manicura terminada</span>
+          <div class="gallery__item gallery__item--square reveal">
+            <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=700&amp;q=75" srcset="https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=400&amp;q=75 400w, https://images.unsplash.com/photo-1610992015732-2449b76344bc?w=700&amp;q=75 700w" sizes="(max-width: 900px) 50vw, 360px" alt="Detalle de manicura terminada, foto de stock temporal" loading="lazy" />
           </div>
         </div>
-        <div class="gallery__item gallery__item--tall reveal" role="img" aria-label="Foto: interior del salón, ambiente cálido y minimalista">
-          <span>Foto: interior del salón, ambiente cálido y minimalista</span>
+        <div class="gallery__item gallery__item--tall reveal">
+          <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&amp;q=75" srcset="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400&amp;q=75 400w, https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=800&amp;q=75 800w" sizes="(max-width: 900px) 50vw, 360px" alt="Interior del salón, ambiente cálido y minimalista, foto de stock temporal" loading="lazy" />
         </div>
       </div>
 
-      <p class="gallery__follow reveal">Síguenos <a href="https://instagram.com/nuasalon" target="_blank" rel="noopener">@nuasalon</a></p>
+      <!-- EDITAR: agrega la cuenta real de Instagram de Nua Salón, o elimina esta línea si el negocio no tiene una -->
+      <p class="gallery__follow reveal">Síguenos <span class="gallery__ig-pending">@nuasalon</span></p>
     </section>
 
     <!-- ===================== POR QUÉ ELEGIRNOS ===================== -->
@@ -186,7 +214,8 @@
             <path d="M20 6l4 8 9 1-6.5 6.5L28 30l-8-4.5L12 30l1.5-8.5L7 15l9-1z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
           </svg>
           <h3>Productos profesionales</h3>
-          <p>Solo usamos marcas de primera calidad, cuidando tu cabello.</p>
+          <!-- EDITAR: reemplaza con nombres de marca reales si el cliente los confirma -->
+          <p>Trabajamos con líneas profesionales de primer nivel, pensadas para el cuidado real de tu cabello.</p>
         </div>
         <div class="why__item reveal">
           <svg class="why__icon" viewBox="0 0 40 40" fill="none" aria-hidden="true">
@@ -205,17 +234,17 @@
       <div class="testimonials__grid">
         <blockquote class="testimonial reveal">
           <span class="testimonial__mark" aria-hidden="true">&#8220;</span>
-          <p>Llevo 4 años viniendo y siempre salgo perfecta. La mejor peluquería de la Gran Avenida.</p>
+          <p>&#8220;Llevo 4 años viniendo y siempre salgo perfecta. La mejor peluquería de la Gran Avenida.&#8221;</p>
           <cite>— Camila R.</cite>
         </blockquote>
         <blockquote class="testimonial reveal">
           <span class="testimonial__mark" aria-hidden="true">&#8220;</span>
-          <p>Me hicieron el balayage exactamente como lo quería. Precio justo y atención increíble.</p>
+          <p>&#8220;Me hicieron el balayage exactamente como lo quería. Precio justo y atención increíble.&#8221;</p>
           <cite>— Fernanda M.</cite>
         </blockquote>
         <blockquote class="testimonial reveal">
           <span class="testimonial__mark" aria-hidden="true">&#8220;</span>
-          <p>Se nota que tienen experiencia de verdad. El corte me duró perfectamente 6 semanas.</p>
+          <p>&#8220;Se nota que tienen experiencia de verdad. El corte me duró perfectamente 6 semanas.&#8221;</p>
           <cite>— Patricia G.</cite>
         </blockquote>
       </div>
@@ -251,7 +280,9 @@
       <div class="contact__grid reveal">
         <div class="contact__item">
           <span class="contact__label">Dirección</span>
+          <!-- EDITAR: falta el número exacto de la dirección, confirmar con el cliente -->
           <p>Gran Avenida José Miguel Carrera, San Miguel, Santiago</p>
+          <a class="contact__directions" href="https://www.google.com/maps/search/?api=1&amp;query=Gran+Avenida+Jos%C3%A9+Miguel+Carrera%2C+San+Miguel%2C+Santiago" target="_blank" rel="noopener">Cómo llegar</a>
         </div>
         <div class="contact__item">
           <span class="contact__label">Horario</span>
@@ -262,6 +293,17 @@
           <a href="#" class="btn btn--primary js-wa-link" data-wa-message="Hola! Quiero reservar una hora 💇‍♀️">Escríbenos</a>
         </div>
       </div>
+
+      <!-- EDITAR: mapa con la dirección aproximada (sin número exacto);
+           actualizar el query del iframe cuando se confirme la dirección completa -->
+      <div class="contact__map reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Gran+Avenida+Jos%C3%A9+Miguel+Carrera,+San+Miguel,+Santiago&amp;output=embed"
+          width="100%" height="320" style="border:0"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación de Nua Salón en San Miguel">
+        </iframe>
+      </div>
     </section>
 
   </main>
@@ -269,6 +311,7 @@
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <p class="footer__brand">NUA SALÓN · SAN MIGUEL · 2026</p>
+    <p class="footer__contact"><a href="#" class="js-wa-link" data-wa-message="Hola! Quiero reservar una hora 💇‍♀️">Escríbenos por WhatsApp</a></p>
     <p class="footer__by">Sitio web por <strong>OrbexStudio</strong> · San Miguel</p>
   </footer>
 
