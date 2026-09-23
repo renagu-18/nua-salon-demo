@@ -16,6 +16,12 @@
 
   --font-serif: 'Cormorant Garamond', serif;
   --font-sans:  'DM Sans', sans-serif;
+
+  /* Tratamiento de color unificado para fotografía:
+     duotono B&N cálido para "ambiente/antes", color graduado en dorado
+     solo para el resultado final ("después"). Ajustar aquí, no en cada foto. */
+  --img-mono:   grayscale(1) sepia(.12) contrast(1.08) brightness(.97);
+  --img-accent: saturate(.8) sepia(.18) hue-rotate(-8deg) contrast(1.05) brightness(1.02);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -210,6 +216,7 @@ a { color: inherit; text-decoration: none; }
     url('https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1200&q=80')
     center/cover no-repeat;
   min-height: 320px;
+  filter: var(--img-mono);
 }
 
 /* ==========================================================
@@ -325,6 +332,7 @@ a.stats__item:hover { opacity: .8; }
   height: 100%;
   object-fit: cover;
   display: block;
+  filter: var(--img-mono);
   transition: transform .5s ease;
 }
 .gallery__item:hover > img { transform: scale(1.04); }
@@ -354,6 +362,10 @@ a.stats__item:hover { opacity: .8; }
 }
 .compare__before {
   clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+  filter: var(--img-mono);
+}
+.compare__after {
+  filter: var(--img-accent);
 }
 .compare__handle {
   position: absolute;
@@ -422,6 +434,8 @@ a.stats__item:hover { opacity: .8; }
   object-fit: cover;
   display: block;
 }
+.split__half:first-child img { filter: var(--img-mono); }
+.split__half:last-child img { filter: var(--img-accent); }
 .split__half figcaption {
   position: absolute;
   bottom: 8px;
@@ -622,8 +636,8 @@ a.stats__item:hover { opacity: .8; }
   right: 24px;
   width: 56px;
   height: 56px;
-  background: #25D366;
-  color: #fff;
+  background: var(--accent);
+  color: var(--text-dark);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -631,8 +645,9 @@ a.stats__item:hover { opacity: .8; }
   box-shadow: 0 4px 16px rgba(0,0,0,0.35);
   z-index: 200;
   animation: wa-pulse 2.4s infinite;
-  transition: opacity .3s ease, transform .3s ease;
+  transition: opacity .3s ease, transform .3s ease, background .25s ease;
 }
+.wa-float:hover { background: var(--accent-l); }
 .wa-float--hidden {
   opacity: 0;
   transform: scale(.8);
@@ -640,9 +655,9 @@ a.stats__item:hover { opacity: .8; }
 }
 
 @keyframes wa-pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.55), 0 4px 16px rgba(0,0,0,0.35); }
-  70%  { box-shadow: 0 0 0 14px rgba(37,211,102,0), 0 4px 16px rgba(0,0,0,0.35); }
-  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0), 0 4px 16px rgba(0,0,0,0.35); }
+  0%   { box-shadow: 0 0 0 0 rgba(212,188,150,0.55), 0 4px 16px rgba(0,0,0,0.35); }
+  70%  { box-shadow: 0 0 0 14px rgba(212,188,150,0), 0 4px 16px rgba(0,0,0,0.35); }
+  100% { box-shadow: 0 0 0 0 rgba(212,188,150,0), 0 4px 16px rgba(0,0,0,0.35); }
 }
 
 /* ==========================================================
